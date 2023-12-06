@@ -1,0 +1,19 @@
+<template>    
+    <div class="slds-box mainDiv">
+        <lightning-combobox name="accountList" label="Select Account to get All Contacts"
+            placeholder="Choose Account Name" value={selectedAccount}
+            options={accountOptions}
+            onchange={accountNameChange}>
+        </lightning-combobox>
+
+        <p>selectedProd value  :{selectedAccount.Name}</p>
+        <template if:true={contacts.data}>            
+        </template>
+        <template if:true={contacts.error}>
+            {contacts.error.body.message}
+        </template> 
+    </div>  
+</template>
+
+
+

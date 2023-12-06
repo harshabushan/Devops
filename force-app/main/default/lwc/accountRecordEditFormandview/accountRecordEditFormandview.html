@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Record View Form">
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around_small">
+                <lightning-card  title="Create A New Account"> 
+                    <lightning-record-edit-form object-api-name="Account" onsuccess={handleSuccess}>
+                       <p><lightning-input-field field-name="Name"></lightning-input-field></p> 
+                       <p><lightning-input-field field-name="phone"></lightning-input-field></p> 
+                       <p><lightning-input-field field-name="Website"></lightning-input-field></p> 
+                       <p><lightning-button type="submit" variant="brand" label="Create Account"></lightning-button></p>
+                    </lightning-record-edit-form>
+                </lightning-card>
+
+            </lightning-layout-item>
+
+            <lightning-layout-item size="6" padding="around_small">
+                <lightning-card  title="View An New Account"> 
+                </lightning-card>
+            </lightning-layout-item>
+
+        </lightning-layout>
+    </lightning-card>
+</template>

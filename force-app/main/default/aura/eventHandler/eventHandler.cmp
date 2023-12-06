@@ -1,0 +1,8 @@
+<aura:component>
+    <aura:attribute name="text" type= "string" default=" this is call in Default"></aura:attribute>
+    <!--<lightning:button variant="base" label="Click me " onclick="{! c.handleClick }"/> -->
+    <aura:handler name="sampleCmpEvent" event="c:sampleCmpEvent" action="{!c.handleclick}"/>
+    <c:childComponentController/>
+    <br/>
+    {!v.text}
+</aura:component>

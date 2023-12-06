@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:registerEvent name="sampleCmpEvent"  type="c.sampleCmpEvent"/>
+    <lightning:button label="click me" onclick="{!c.handleclick}"/>    
+</aura:component>

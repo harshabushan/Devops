@@ -1,0 +1,28 @@
+<template>
+    <div class="slds-box slds-p-around_small" style="background-color:burlywood;">
+        <lightning-input 
+                        label="Enter Case Number" 
+                        placeholder="Case Number" 
+                        value={searchCaseNumber} 
+                        onchange={caseNumberChange}>  
+        </lightning-input>
+                        <template if:true={cases}>
+                            <div class="slds-grid slds-wrap sds-gutters">
+                                <template for:each={cases} for:item="eachCase">
+                                    <div class="slds-col slds-size_1-of-3 slds-p-around_small" key={eachCase.Id}>
+                                        <lightning-card title={eachCase.CaseNumber} >
+                                            <div slot="actions">
+                                                <template if:true={eachCase.IsClosed}>
+                                                    <span style="color: green;font-weight: bold;">Already Closed</span>
+                                                </template>
+                                               
+                                            </div>
+                                           
+                                        </lightning-card>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+    </div>
+    
+</template>
